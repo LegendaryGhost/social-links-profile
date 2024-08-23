@@ -1,0 +1,168 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* Reset */
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+/* Animation */
+@-webkit-keyframes fade-in {
+    from {
+        -webkit-transform: translateY(15%);
+        transform: translateY(15%);
+        opacity: 0;
+    }
+
+    to{
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fade-in {
+    from {
+        -webkit-transform: translateY(15%);
+        transform: translateY(15%);
+        opacity: 0;
+    }
+
+    to{
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Main style */
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%);
+
+    --large-spacing: 20px;
+    --medium-spacing: 12px;
+    --small-spacing: 4px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--white);
+
+    background-color: var(--grey-900);
+
+    display: -ms-grid;
+
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.card {
+    background-color: var(--grey-800);
+    border-radius: 20px;
+    padding: var(--large-spacing);
+    width: min(100vw, 325px);
+    -webkit-animation: fade-in .8s .2s ease-out both;
+    animation: fade-in .8s .2s ease-out both;
+}
+
+.profile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.profile>* {
+    margin-bottom: var(--large-spacing);
+}
+
+.profile-img {
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.profile-name {
+    margin-bottom: var(--small-spacing);
+}
+
+.profile-location {
+    font-size: 1rem;
+    color: var(--green);
+}
+
+.links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: var(--medium-spacing);
+}
+
+.link {
+    font-weight: bold;
+    text-align: center;
+
+    background-color: var(--grey-700);
+    padding: var(--medium-spacing);
+    border-radius: 10px;
+}
+
+.link:hover, .link:focus {
+    background-color: var(--green);
+    color: var(--grey-900);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    padding: .5rem;
+}
+
+.attribution a {
+    color: var(--green);
+    font-weight: bold;
+}
+
+@media screen and (max-height: 650px) {
+    .attribution {
+        position: static;
+    }
+}
