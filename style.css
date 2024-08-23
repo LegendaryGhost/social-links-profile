@@ -114,6 +114,8 @@ body {
     width: 100px;
     aspect-ratio: 1;
     border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 .profile-name {
@@ -164,5 +166,12 @@ body {
 @media screen and (max-height: 650px) {
     .attribution {
         position: static;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    .card {
+        padding: 40px;
+        width: 400px;
     }
 }
