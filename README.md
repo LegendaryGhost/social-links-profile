@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [click here](https://your-solution-url.com)
-- Live Site URL: [click here](https://your-live-site-url.com)
+- Solution URL: [click here](https://www.frontendmentor.io/solutions/social-links-profile-4Luae8UlGO)
+- Live Site URL: [click here](https://legendaryghost.github.io/social-links-profile/)
 
 ## My process
 
